@@ -9,9 +9,10 @@ import { infuraProvider } from "wagmi/providers/infura";
 import { publicProvider } from "wagmi/providers/public";
 
 const infuraId = process.env.NEXT_PUBLIC_INFURA_ID;
+
 const { chains, provider } = configureChains(
   [chain.polygon],
-  [infuraProvider({ infuraId }, publicProvider())]
+  [infuraProvider({ infuraId }), publicProvider()]
 );
 
 const { connectors } = getDefaultWallets({
@@ -28,7 +29,7 @@ const wagmiClient = createClient({
 export default function MyApp({ Component, pageProps }) {
   return (
     <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider chaines={chaines}>
+      <RainbowKitProvider chains={chains}>
         <Layout>
           <Component {...pageProps} />
         </Layout>
