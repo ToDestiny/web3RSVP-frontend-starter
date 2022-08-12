@@ -75,7 +75,7 @@ export default function CreateEvent() {
 
         setLoading(true);
         console.log("Minting...", txn.hash);
-        let wait = txn.wait();
+        let wait = await txn.wait();
         console.log("Minted -- ", txn.hash);
 
         setEventID(wait.events[0].args[0]);
