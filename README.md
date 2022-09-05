@@ -1,5 +1,13 @@
 # Web3RSVP-frontend
 
+## Technologies
+Filecoin & IPFS
+The Graph
+Radicle
+Infura
+Polygon
+Lens
+
 ### Fork and clone the repo from Github to work with it locally
 
 1. Click the "Fork" button
